@@ -22,15 +22,15 @@ function getImage() { // get random image
     const textTranslated = await axios.get(`https://api.mymemory.translated.net/get?q=${text.data.text}!&langpair=la|pt-br`); // translate the text (because it's in latin)
 
     for(let i = 0; i < amigos.length; i++) {// Create a custom message for each contact filtered above
-        const img = await jimp.read(url);
+        const img = await jimp.read(url); // read img from Url
         
-        let newImg = await img.print(font28, 10, 10, "Bom dia");
+        let newImg = await img.print(font28, 10, 10, "Bom dia"); // Add msg
         
-        newImg = await img.print(font78, 3, 50, amigos[i].pushname + '...'); // GEt the name in whatsup
-        newImg = await newImg.print(font28, 100, 300, 'e bora cod');
+        newImg = await img.print(font78, 3, 50, amigos[i].pushname + '...'); // Get the name in whatsapp
+        newImg = await newImg.print(font28, 100, 300, 'e bora cod'); // Add msg
         
-        const base64 = await newImg.getBase64Async(jimp.MIME_JPEG);
-        await client.sendFile(amigos[i].id._serialized, base64, 'Bom dia.jpg', textTranslated.data.responseData.translatedText);
+        const base64 = await newImg.getBase64Async(jimp.MIME_JPEG); // convert the image to base64
+        await client.sendFile(amigos[i].id._serialized, base64, 'Bom dia.jpg', textTranslated.data.responseData.translatedText); // Send the image
     }
 })()
 
