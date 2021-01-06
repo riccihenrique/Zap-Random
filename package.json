@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@open-wa/wa-automate": "^1.9.67",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "jimp": "^0.13.0",
     "p-queue": "^6.4.0"
   }
