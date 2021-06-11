@@ -11,5 +11,8 @@
     "axios": "^0.19.2",
     "jimp": "^0.13.0",
     "p-queue": "^6.4.0"
+  },
+  "devDependencies": {
+    "jest": "^27.0.4"
   }
 }
