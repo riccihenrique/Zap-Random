@@ -7,7 +7,7 @@
     "start": "./index.mjs"
   },
   "dependencies": {
-    "@open-wa/wa-automate": "^1.9.67",
+    "@open-wa/wa-automate": "4.5.1",
     "axios": "^0.19.2",
     "jimp": "^0.13.0",
     "p-queue": "^6.4.0"
